@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
@@ -102,12 +102,7 @@ function ChatMessage(props) {
   return (
     <>
       <div className={`message ${messageClass}`}>
-        <img
-          src={
-            photoURL ||
-            "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-          }
-        />
+        <img src={photoURL} />
       </div>
       <p>{text}</p>
     </>
